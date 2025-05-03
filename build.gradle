@@ -10,14 +10,7 @@ repositories {
         url 'https://github.com/'
         patternLayout {
             artifact '/[organization]/[module]/releases/download/[revision]/[ext]'
-        }
-        metadataSources {
-            artifact()
-        }
-    }
-    ivy {
-        url 'https://github.com/'
-        patternLayout {
+            artifact '/[organization]/[module]/raw/[revision]/jars/[ext]'
             artifact '/[organization]/[module]/raw/master/jars/[revision]'
         }
         metadataSources {
@@ -25,6 +18,7 @@ repositories {
         }
     }
 }
+
 
 // project level config
 java {
@@ -48,7 +42,7 @@ build {
 
 // compile time dependencies
 dependencies {
-    compileOnly "jaghaimo:starsector-api:0.98a-RC8@starfarer.api.jar"
+    compileOnly "jaghaimo:starsector-api:0.98a-RC7@starfarer.api.jar"
     implementation "Histidine91:Nexerelin:ExerelinCore.jar"
 
     // game dependencies
